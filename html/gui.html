@@ -9,16 +9,16 @@
 
     <div id='d1' class="column1" style="padding-top: 40px;">
 
-      <a id="boring" href="#">
+      <a id="boring" href="#" onclick="ajax('sudo docker --version');">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
         Docker Version
-        <button class="button" type="submit" onclick="ajax('sudo docker --version');">Run</button>
+        <button class="button" type="submit" >Run</button>
       </a>
 
-      <a id="boring" href="#">
+      <a id="boring" href="#" onclick="ajax('sudo docker ps -a');">
         <span></span>
         <span></span>
         <span></span>
@@ -27,7 +27,7 @@
         <button class="button" type="submit" onclick="ajax('sudo docker ps -a');">Run</button>
       </a>
       <br />
-      <a id="boring" href="#">
+      <a id="boring" href="#" onclick="ajax('sudo docker images');">
         <span></span>
         <span></span>
         <span></span>
@@ -35,7 +35,7 @@
         Show Images
         <button class="button" onclick="ajax('sudo docker images');">Run</button>
       </a>
-      <a id="boring" href="#">
+      <a id="boring" href="#" onclick="ajax('sudo docker pull ' + printer('x'));">
         <span></span>
         <span></span>
         <span></span>
@@ -157,7 +157,7 @@
       var xhr = new XMLHttpRequest();
 
 
-      xhr.open("GET", "http://192.168.163.109/cgi-bin/cli.py?x=" + i, true);
+      xhr.open("GET", "http://192.168.29.232/cgi-bin/cli.py?x=" + i, true);
 
       xhr.send();
 
