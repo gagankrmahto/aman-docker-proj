@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>Our Page</title>
+
+</head>
+
+    <script>
+        function lw() {
+            var i = document.getElementById("in1").value
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "http://192.168.29.232/cgi-bin/dock.py?x=" + i, true);
+
+            xhr.send()
+
+            //output from above url
+            xhr.onload = function () {
+                var output = xhr.responseText;
+                document.getElementById("d1").innerHTML = output;
+            }
+        }
+    </script>
+    <div id="d"></div>root@ishaanhost ~]: <input id="in1" />
+    <br />
+    <pre>
+<div id="d1">Output..</div>
+</pre>
+    <!-- <button onclick="lw()">click</button> -->
+
+    <!-- For Output Button -->
+    <button type="button" class="btn btn-primary btn-sm" onclick="lw()">Click</button>
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Docker Run</h5>
+            <p class="card-text">This will download, create and run the container from docker hub. Try it out! .</p>
+            <button type="button" class="btn btn-primary btn-sm" onclick="lw()">Click</button>
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
